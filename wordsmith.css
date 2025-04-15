@@ -1,0 +1,145 @@
+*{
+    font-family:system-ui;
+    margin:0;
+    padding:0;
+    color:#033475;
+    font-size:100%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    user-select:none;
+    background-repeat: no-repeat;
+}
+
+#button{
+    background:none;
+    outline: none;
+    border:0;
+    cursor:pointer;
+
+
+}
+
+
+
+
+#banner{
+    font-size: 300%;
+    font-weight: 700;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:1em 0em;
+    letter-spacing: -5px
+}
+#body{
+    height: 100vh;
+    width: 100vh;
+}
+#banner>::first-letter{
+    color: #e35;
+}
+#tile{
+    font-size:400%;
+    border-radius: 7px;
+    font-weight: 700%;
+    padding: .5em;
+    font-family: monospace;
+    border: 1px solid #0fff7511;
+}
+#word{
+    padding: 1em 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:1em;
+}
+#hint{
+    border: 1px solid;
+    padding: 1em;
+}
+
+#bulb{
+    height: 3em;
+    width: 3em;
+}
+
+#txt{
+    font-size: 150%;
+    font-weight: 500;
+    font-family: monospace;
+
+}
+
+#chevron{
+    height: 1em;
+    width: 1em;
+    top: 50%;
+    transform: translaeteY(-50%);
+    border-radius: 7px;
+    position: absolute;
+    transition: box-shadow .5s;
+}
+#backward{
+    left: 4em;
+    background-image:url(chevron-back-outline.svg)
+}
+
+#forward{
+    right:4em;
+    background-image: url(chevron-forward-outline.svg);
+}
+
+#chevron:hover{
+    box-shadow: 0px 3px 5px #ccc;
+}
+
+#restartBtn{
+    border: 1px solid red;
+    height: 4em;
+    width: 4em;
+    background-image: url(refresh-outline.svg);
+}
+
+#hintBtn{
+    height: 4em;
+    width: 4em;
+    border: 1px solid red;
+    box-shadow: none;
+    background-image: url(help-circle-outline.svg);
+}
+
+
+#active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:2em;
+}
+#checkBtn > span{
+    color: #fff;
+    font-size: 110%;
+    font-weight: 500;
+    
+
+}
+    
+#checkBtn{
+    border-radius:24px;
+   background-color: #8b008b;
+   border: 1px solid red;
+   align-items: center;
+   justify-content: center;
+   padding-left: 2em;
+
+}
+
+
+
+#cup{
+    height: 4em;
+    width: 4em;
+    background-image:url(trophy-outline.svg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
