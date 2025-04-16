@@ -8,7 +8,6 @@
     box-sizing: border-box;
     user-select:none;
     background-repeat: no-repeat;
-    
 }
 
 #button{
@@ -34,15 +33,15 @@
 }
 #body{
     height: 100vh;
-    width: 100vw;
+    width: 100vh;
 }
-#banner > ::first-letter{
+#banner>::first-letter{
     color: #e35;
 }
 #tile{
-    font-size:300%;
+    font-size:400%;
     border-radius: 7px;
-    font-weight: 700;
+    font-weight: 700%;
     padding: .5em;
     font-family: monospace;
     border: 1px solid #0fff7511;
@@ -54,6 +53,10 @@
     align-items: center;
     gap:1em;
 }
+@keyframes blink{
+    {transform opacity:100%}
+    {transform opacity:0%}
+}
 #hint{
     border: 1px solid;
     padding: 1em;
@@ -63,17 +66,6 @@
     height: 3em;
     width: 3em;
 }
-
-#p{
-
-}
-
-
-
-
-
-
-
 
 #txt{
     font-size: 150%;
@@ -121,13 +113,11 @@
 }
 
 
-#action{
+#active{
     display: flex;
     align-items: center;
     justify-content: center;
     gap:2em;
-    width: 50%;
-    margin: 0 auto;
 }
 #checkBtn > span{
     color: #fff;
@@ -139,11 +129,11 @@
     
 #checkBtn{
     border-radius:24px;
-   background-color: #6211ab;
+   background-color: #8b008b;
    border: 1px solid red;
    align-items: center;
    justify-content: center;
-   padding-left: 52em;
+   padding-left: 2em;
 
 }
 
@@ -153,33 +143,7 @@
     height: 4em;
     width: 4em;
     background-image:url(trophy-outline.svg);
-    position: relative;
-}
-#i{       
-padding:.5
-
-
-}
-
-
-#footer{
-    position: sticky;
-    top:100%;
-    background-color: #f9f9f9;
-                                                      
-}
-
-#author{
-    padding:2em;
-    background-color: #555;
+    display: flex;
     align-items: center;
     justify-content: center;
-}
-@media (width <= 480px)  {
-    .tile{  
-        font-size: 100%;  
-}
-    #forward, #backward{
-        background-size: 30%;
-}
 }
