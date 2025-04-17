@@ -15,12 +15,7 @@
     outline: none;
     border:0;
     cursor:pointer;
-
-
 }
-
-
-
 
 #banner{
     font-size: 300%;
@@ -31,6 +26,7 @@
     padding:1em 0em;
     letter-spacing: -5px
 }
+
 #body{
     height: 100vh;
     width: 100vh;
@@ -54,8 +50,9 @@
     gap:1em;
 }
 @keyframes blink{
-    {transform opacity:100%}
-    {transform opacity:0%}
+    {opacity:1%};
+    {opacity:0%};
+    {opacity: 1%;}
 }
 #hint{
     border: 1px solid;
@@ -85,12 +82,12 @@
 }
 #backward{
     left: 4em;
-    background-image:url(chevron-back-outline.svg)
+    background-image:url(chevron-forward-outline.svg)
 }
 
 #forward{
     right:4em;
-    background-image: url(chevron-forward-outline.svg);
+    background-image: url(chevron-back-outline.svg)
 }
 
 #chevron:hover{
@@ -136,6 +133,14 @@
    padding-left: 2em;
 
 }
+#checkBtn > i{
+    height: 4em;
+    width: 4em;
+    background-image:url(arrow-forward-outline.svg);
+    background-size: 5em;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 
 
@@ -147,3 +152,72 @@
     align-items: center;
     justify-content: center;
 }
+
+
+#i{       
+    padding:.5
+    
+    
+    }
+    
+    
+    #footer{
+        position: sticky;
+        top:100%;
+        background-color: #f9f9f9;
+                                                          
+    }
+    
+    #author{
+        padding:2em;
+        background-color: #555;
+        align-items: center;
+        justify-content: center;
+    }
+    @media (width <= 480px)  {
+        .tile{  
+            font-size: 100%;  
+    }
+        #forward, #backward{
+            background-size: 30%;
+    }
+    }
+    #word{
+        position: static;
+    }
+    #backwards{
+        right: 0;
+    }
+    #forward{
+        left:0;
+    }
+    #txt{
+        font-size: 100%;
+    }
+    #action{
+        border: 1px dotted red;
+        width:100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #checkBtn{
+        margin-left: 0;
+    }
+    #restartBtn, #hintBtn{
+        width: 5em;
+        height: 5em;
+        background-size: 100%;
+
+    }
+    #cup > i{
+        font-size: 70%;
+    }
+    #cup{
+        width: 4em;
+        height: 4em;
+    }
+    #chckBtn > i{
+        height: 4em;
+        width: 4em;
+
+    }

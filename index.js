@@ -17,7 +17,7 @@ document.querySelector('#user >  i').textContent = "?"*/
  eye.addEventListener('mouseup',() =>{ //this masks the password../
     ipt.type = 'password';
  });
- //this submitthe passwords with the form
+ //this submits the passwords with the form
  fm.addEventListener('submit',(e)=>{
     e.preventDefault();//this will stop the page from reloading
     const password ='konikawa';
@@ -48,7 +48,7 @@ const dob =new Date ('4/28/2014').getTime(); //date format in java script => mon
 
  //FU8NCTIONS
  //A FUNCTIONS ARE GROUP OF STATEMENTS THAT DO NOT RUN UNLESS WHEN CALLED
- function calculator () {
+ /*function calculator () {
  console.log(2 + 4);
  console.log(10 - 5)
  console.log(10 / 2)
@@ -75,7 +75,8 @@ const dob =new Date ('4/28/2014').getTime(); //date format in java script => mon
     console.log(new Date(today).getDate())
     if (new Date(today).getMonth() ===d && new Date(today))
         pan.querySelector('#panel').classList.add('bgi');
-    }
-}
+
 callConfetti();
+
+
  

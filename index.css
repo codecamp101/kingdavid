@@ -126,13 +126,15 @@ output{
 }
 
 #panel{
+    position: relative;
     height:85%;
     /* border:1px solid yellow; */
     background-color: #777;
     border-radius: 8px;
     opacity: 0;
     display: flex;
-    flex-direction:column ;
+    flex-direction: column ;
+    align-items: center;
     gap:1em;
     margin: 3em;
     background-repeat: no-repeat;
@@ -187,9 +189,11 @@ output{
     background-position: center;
     width:2em;
     height: 1em;
+    align-items: center;
+    
 }
 #age{
-    font-size:400% ;
+    font-size: 400%;
     -webkit-text-fill-color: transparent;
     background-image:linear-gradient(to right, #e35 100%, #333 0%);
     background-clip:text;
@@ -197,3 +201,20 @@ output{
 }
 
 
+
+#panel > a {
+    text-decoration: none;
+    color: #f3f3f3;
+    padding: 0.5em;
+    border-radius: 7px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1em;
+    /*background-color: #333;*/
+    font-weight: 700;
+    transition:background-color .3s;
+}
+#panel > a:hover{
+    background-color: #333;
+}
