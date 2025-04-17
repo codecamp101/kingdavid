@@ -110,7 +110,7 @@
 }
 
 
-#active{
+#action{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -204,19 +204,19 @@
         margin-left: 0;
     }
     #restartBtn, #hintBtn{
-        width: 5em;
-        height: 5em;
-        background-size: 100%;
+        width: 2em;
+        height: 4em;
+        
 
     }
     #cup > i{
         font-size: 70%;
     }
     #cup{
-        width: 4em;
+        width: 2em;
         height: 4em;
     }
-    #chckBtn > i{
+    #checkBtn > i{
         height: 4em;
         width: 4em;
 
