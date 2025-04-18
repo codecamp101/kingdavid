@@ -8,21 +8,15 @@
     box-sizing: border-box;
     user-select:none;
     background-repeat: no-repeat;
-    
+    background-position: center;
 }
 
-#button{
+button{
     background:none;
     outline: none;
     border:0;
     cursor:pointer;
-
-
 }
-
-
-
-
 #banner{
     font-size: 300%;
     font-weight: 700;
@@ -32,81 +26,72 @@
     padding:1em 0em;
     letter-spacing: -5px
 }
-#body{
+body{
     height: 100vh;
     width: 100vw;
 }
 #banner > ::first-letter{
     color: #e35;
 }
-#tile{
+.tile{
+    text-transform: uppercase;
     font-size:300%;
     border-radius: 7px;
     font-weight: 700;
     padding: .5em;
     font-family: monospace;
-    border: 1px solid #0fff7511;
+    border: 1px solid #03347533;
 }
 #word{
-    padding: 1em 0;
+    padding: 3em 0;
     display:flex;
     justify-content: center;
     align-items: center;
     gap:1em;
+    position:relative;
 }
 #hint{
-    border: 1px solid;
     padding: 1em;
+    margin: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #bulb{
     height: 3em;
     width: 3em;
+    background-image: url('bulb-outline.svg');
 }
-
-#p{
-
-}
-
-
-
-
-
-
-
-
 #txt{
     font-size: 150%;
     font-weight: 500;
     font-family: monospace;
-
 }
-
-#chevron{
-    height: 1em;
-    width: 1em;
+.chevron{
+    height: 5em;
+    width: 5em;
     top: 50%;
     transform: translateY(-50%);
     border-radius: 7px;
     position: absolute;
     transition: box-shadow .5s;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 #backward{
     left: 4em;
     background-image:url(chevron-back-outline.svg)
 }
-
 #forward{
     right:4em;
     background-image: url(chevron-forward-outline.svg);
 }
-
-#chevron:hover{
+.chevron:hover{
     box-shadow: 0px 3px 5px #ccc;
 }
-
 #restartBtn{
-    border: 1px solid red;
     height: 4em;
     width: 4em;
     background-image: url(refresh-outline.svg);
@@ -115,71 +100,193 @@
 #hintBtn{
     height: 4em;
     width: 4em;
-    border: 1px solid red;
     box-shadow: none;
     background-image: url(help-circle-outline.svg);
 }
-
-
 #action{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:2em;
+    gap: 3em;
     width: 50%;
     margin: 0 auto;
+}
+#restartBtn, #hintBtn {
+    border-radius: 7px;
+    transition: box-shadow .3s;
+}
+#restartBtn:hover, #hintBtn:hover {
+    box-shadow: 0 3px 5px #ccc;
+}
+#restartBtn, #hintBtn, #cup, #bulb {
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#checkBtn{
+    border-radius:24px;
+    background-color: #6211a3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1em;
+    margin-left: auto;
 }
 #checkBtn > span{
     color: #fff;
     font-size: 110%;
     font-weight: 500;
-    
-
 }
-    
-#checkBtn{
-    border-radius:24px;
-   background-color: #6211ab;
-   border: 1px solid red;
-   align-items: center;
-   justify-content: center;
-   padding-left: 52em;
-
+#checkBtn > i {
+    height: 3em;
+    width: 3em;
+    background-image: url('arrow-forward-outline.svg');
+    background-size: 50%;
 }
-
-
-
 #cup{
     height: 4em;
     width: 4em;
     background-image:url(trophy-outline.svg);
     position: relative;
 }
-#i{       
-padding:.5
-
-
+#cup > i {
+    font-style: normal;
+    background-color: #033475;
+    padding: .3em .5em;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
 }
-
-
-#footer{
+footer{
     position: sticky;
     top:100%;
     background-color: #f9f9f9;
-                                                      
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
-
 #author{
     padding:2em;
-    background-color: #555;
+    color: #555;
     align-items: center;
     justify-content: center;
 }
+#trophy, #wrap, #x_close {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+}
+::backdrop {
+    background-color: #3339;
+}
+[popover] {
+    outline: none;
+    border: 0;
+}
+#gameover {
+    width: 360px;
+    height: 488px;
+    margin: auto;
+    border-radius: 16px;
+    overflow: hidden;
+}
+#wrap {
+    height: 100%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    background-image: url('./sun_ray_pattern_stock_photos.jpg');
+    background-size: cover;
+}
+#trophy {
+    background-image: url('./trophy-outline.svg');
+    height: 10em;
+    width: 10em;
+    /* border: 1px solid; */
+    background-size: 70%;
+}
+@keyframes spinY {
+    from {
+        rotate: y 0deg;
+    }
+    to {
+        rotate: y 180deg;
+    }
+}
+#gameover:popover-open #trophy {
+    animation: spinY .5s linear 1 backwards;
+}
+#total_score, pre {
+    font-family: monospace;
+    font-size: 400%;
+    font-weight: 700;
+}
+sup {
+    font-family: monospace;
+    font-size: 70%;
+}
+#x_close {
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    position: fixed;
+    right: 3em;
+    top: 3em;
+    background-image: url('./close-outline.svg');
+    border: 1px solid #f3f3f3;
+}
+
+/*responsive design*/
 @media (width <= 480px)  {
     .tile{  
         font-size: 100%;  
-}
+    }
     #forward, #backward{
         background-size: 30%;
+    }
+    #word{
+        position: static;
+    }
+    #backwards{
+        right: 0;
+    }
+    #forward{
+        left:0;
+    }
+    #txt{
+        font-size: 100%;
+    }
+    #action{
+        border: 1px dotted red;
+        width:100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #checkBtn{
+        margin-left: 0;
+    }
+    #restartBtn, #hintBtn{
+        width: 2em;
+        height: 4em;
+        
+    
+    }
+    #cup > i{
+        font-size: 70%;
+    }
+    #cup{
+        width: 2em;
+        height: 4em;
+    }
+    #checkBtn > i{
+        height: 4em;
+        width: 4em;
+    
+    }
 }
-}
+
